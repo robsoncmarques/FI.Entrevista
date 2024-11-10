@@ -48,6 +48,7 @@ namespace FI.AtividadeEntrevista.BLL
             beneficiariosExcluir.ForEach(x => daoBeneficiario.Excluir(x.Id));
             cliente.Beneficiarios.Where(x => x.Id != 0).ToList().ForEach(x => daoBeneficiario.Alterar(x));
             cliente.Beneficiarios.Where(x => x.Id == 0).ToList().ForEach(x => daoBeneficiario.Incluir(x));
+
         }
 
         /// <summary>
