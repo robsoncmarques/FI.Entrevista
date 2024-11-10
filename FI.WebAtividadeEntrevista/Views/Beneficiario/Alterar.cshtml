@@ -1,0 +1,15 @@
+﻿@model WebAtividadeEntrevista.Models.BeneficiarioModel
+@{
+    ViewBag.Title = "Alterar Beneficiario";
+}
+@section scripts{
+    <script>
+        var obj = @Html.Raw(Json.Encode(Model));
+        var urlPost = '@Url.Action("Alterar", "Beneficiario", new { area = "" })';
+
+        var urlRetorno = '@Url.Action("Index", "Beneficiario", new { area = "" })';
+    </script>
+    @Scripts.Render("~/bundles/altClientes")
+}
+<h2>@Html.Raw(ViewBag.Title)</h2>
+@Html.Partial("Forms")
